@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Wibu Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('images/bgbottom.webp') no-repeat center center/cover;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            text-align: center;
+            width: 300px;
+        }
+        .login-container h2 {
+            color: #fff;
+        }
+        .input-group {
+            margin: 15px 0;
+            display: flex;
+        }
+        .input-group i {
+            color: white;
+            font-size: 20px;
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+        .login-btn {
+            width: 200px;
+            padding: 10px;
+            background: #ff4081;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .login-btn:hover {
+            background: #ac093f;
+        }
+        .logo{
+            width: 100px;
+            height: 100px;
+            background-image: url(images/anhbanner/ban6.jpg);
+            background-size: cover;
+            border-radius: 50% 50%;
+            margin-left: 30%;
+        }
+        
+        .tv{
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+        }
+        .tv label{
+            color: rgb(255, 0, 0);
+            font-weight: bold;
+            margin-left: 19%;
+        }
+    </style>
+</head>
+<body>
+    <form action="xulylogin.php" method="post" >
+            <div class="login-container">
+                <div class="logo" >
+                    <img src="" alt="" srcset="">
+                </div>
+                <h2>Đăng nhập Wibu Shop</h2>
+                <div class="input-group">
+                    
+
+                    <i class="fa fa-user" aria-hidden="true"></i><input type="text" name="username" placeholder="Tên đăng nhập" required>
+                </div>
+                <div class="input-group">
+                    
+
+                    <i class="fa fa-lock" aria-hidden="true"></i><input type="password" name="password"  placeholder="Mật khẩu" required>
+                </div>
+                <div class="tv">
+                    <label for="">Bạn đăng ký thành công !</label>
+                </div>
+                <button class="login-btn">Đăng nhập</button>
+                
+            </div>
+    </form>
+</body>
+</html>

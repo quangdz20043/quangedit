@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider trong thẻ A</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <a href="#" onclick="toggleSlider(event)">🖼 Xem Ảnh</a>
+
+    <div id="sliderContainer">
+            
+                
+        <a class="close-btn" href="#" onclick="toggleSlider(event)" >
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </a>
+        
+   
+    <div class="slider">
+        <img class="active" src="assets/images/ảnh/shirt/anh10.jpg" alt="Ảnh 1">
+        <img src="assets/images/ảnh/shirt/anh9.jpg" alt="Ảnh 2">
+        <img src="assets/images/ảnh/shirt/anh8.jpg" alt="Ảnh 3">
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </div>
+    
+</div>
+
+    <script>
+        function toggleSlider(event) {
+            event.preventDefault(); // Ngăn chặn load lại trang khi click vào <a>
+            var slider = document.getElementById("sliderContainer");
+            if (slider.style.display === "none" || slider.style.display === "") {
+                slider.style.display = "block";
+            } else {
+                slider.style.display = "none";
+            }
+        }
+
+        let slideIndex = 0;
+        
+        function changeSlide(n) {
+            let images = document.querySelectorAll(".slider img");
+            images[slideIndex].classList.remove("active");
+
+            slideIndex += n;
+            if (slideIndex >= images.length) slideIndex = 0;
+            if (slideIndex < 0) slideIndex = images.length - 1;
+
+            images[slideIndex].classList.add("active");
+        }
+    </script>
+
+</body>
+</html>

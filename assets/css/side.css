@@ -1,0 +1,83 @@
+#sliderContainer {
+    display: none; /* Ẩn ban đầu */
+    width: 650px;
+    height: 414px;
+    background: rgb(200, 200, 200);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Đưa lên trên */
+    text-align: center;
+}
+
+/* Làm mờ nền khi mở slider */
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(248, 0, 0, 0.5);
+    z-index: 999; /* Đặt dưới slider */
+}
+
+/* Thiết lập slider */
+.slider {
+    left: 4%;
+    top: -20px;
+    position: relative;
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slider img {
+    border-radius: 10px;
+    width: 400px;
+    /* Ẩn tất cả ảnh */
+}
+
+/* Hiển thị ảnh đầu tiên */
+.slides img.active {
+    display: block;
+}
+
+/* Nút điều hướng */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Nút ẩn slider */
+.close-btn {
+    text-align: right;
+    
+    margin-top: 30px;
+    background: rgb(139, 139, 139);
+    color: white;
+    
+    
+    cursor: pointer;
+    border-radius: 5px;
+}
+.close-btn i{
+    padding: 5px 10px;
+    display: block;
+    color: rgb(255, 255, 255);
+}
